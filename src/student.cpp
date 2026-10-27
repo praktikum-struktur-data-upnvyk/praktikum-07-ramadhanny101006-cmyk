@@ -74,6 +74,7 @@ void preorder(const Node* root) {
     cout << root->data << " ";
     preorder (root->left);
     preorder (root->right);
+
 }
 
 // =============================================================================
@@ -97,12 +98,12 @@ void preorder(const Node* root) {
 //     inorder(NULL);     // tidak mencetak apa pun
 // =============================================================================
 void inorder(const Node* root) {
-     if (root == nullptr){
+    if (root == nullptr){
         return;
     }
 
-    cout << root->data << " ";
     inorder (root->left);
+    cout << root->data << " ";
     inorder (root->right);
 }
 
@@ -132,9 +133,9 @@ void postorder(const Node* root) {
         return;
     }
 
-    cout << root->data << " ";
     postorder (root->left);
     postorder (root->right);
+    cout << root->data << " ";
 }
 
 // =============================================================================
@@ -207,7 +208,7 @@ void clear(Node*& root) {
 //     3                           masih punya satu cabang)
 // =============================================================================
 int jumlahDaun(const Node* root) {
-     if (root == nullptr) {
+    if (root == nullptr) {
         return 0;
     }
 
@@ -216,7 +217,6 @@ int jumlahDaun(const Node* root) {
     }
 
     return jumlahDaun(root->left) + jumlahDaun(root->right);
-    return 0;
 }
 
 // =============================================================================
